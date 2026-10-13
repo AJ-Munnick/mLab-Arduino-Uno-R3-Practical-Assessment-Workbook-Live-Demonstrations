@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Braydon Alexander - IoT Demos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Braydon Alexander's Arduino Uno R3 project demonstrations.">
+  <title>Braydon Alexander | Arduino Project Demonstrations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>Braydon Alexander - IoT Project Demonstrations</h1>
-
-  <h2>Project 1: Potentiometer LED Dimmer</h2>
-  <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Project 2: Automatic Night Light</h2>
-  <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Project 3: Push-Button Traffic Light</h2>
-  <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Project 4: Potentiometer Servo Controller</h2>
-  <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Project 5: Light Controlled Servo</h2>
-  <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Project 6: Smart Model Security Gate</h2>
-  <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-
-  <!-- Repeat for all projects -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Arduino Project Showcase</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="member1.html">Arsenio</a><a href="member2.html">Jadelyn</a><a href="member3.html">Emilio</a><a href="member4.html">Braydon</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <section class="page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Arduino Uno R3 · Live demonstrations</p>
+      <h1 id="page-title">Braydon Alexander</h1>
+      <p>Browse the six project demonstrations. Use the project links to jump directly to a build.</p>
+    </section>
+    <nav class="project-nav" aria-label="Jump to a project">
+      <a href="#project-1">Project 1</a><a href="#project-2">Project 2</a><a href="#project-3">Project 3</a><a href="#project-4">Project 4</a><a href="#project-5">Project 5</a><a href="#project-6">Project 6</a>
+    </nav>
+    <section class="project-list" aria-label="Project demonstrations">
+      <article class="project-card" id="project-1"><div class="project-copy"><p class="project-number">Project 1</p><h2>Potentiometer LED Dimmer</h2></div><div class="video-placeholder">Demonstration video coming soon.</div></article>
+      <article class="project-card" id="project-2"><div class="project-copy"><p class="project-number">Project 2</p><h2>Automatic Night Light</h2></div><div class="video-placeholder">Demonstration video coming soon.</div></article>
+      <article class="project-card" id="project-3"><div class="project-copy"><p class="project-number">Project 3</p><h2>Push-Button Traffic Light</h2></div><div class="video-placeholder">Demonstration video coming soon.</div></article>
+      <article class="project-card" id="project-4"><div class="project-copy"><p class="project-number">Project 4</p><h2>Potentiometer Servo Controller</h2></div><div class="video-placeholder">Demonstration video coming soon.</div></article>
+      <article class="project-card" id="project-5"><div class="project-copy"><p class="project-number">Project 5</p><h2>Light Controlled Servo</h2></div><div class="video-placeholder">Demonstration video coming soon.</div></article>
+      <article class="project-card" id="project-6"><div class="project-copy"><p class="project-number">Project 6</p><h2>Smart Model Security Gate</h2></div><div class="video-placeholder">Demonstration video coming soon.</div></article>
+    </section>
+  </main>
+  <footer class="site-footer"><p><a href="index.html">Back to all demonstrations</a></p></footer>
 </body>
 </html>

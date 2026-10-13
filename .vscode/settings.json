@@ -1,0 +1,12 @@
+{
+    "github.copilot.chat.exploreAgent.enabled": false,
+    "github.copilot.chat.gpt55GetChangedFilesTool.enabled": false,
+    "github.copilot.chat.gpt55ReadFileTool.enabled": false,
+    "github.copilot.chat.imageUpload.enabled": false,
+    "github.copilot.chat.languageContext.typescript.enabled": false,
+    "github.copilot.chat.newWorkspaceCreation.enabled": false,
+    "github.copilot.chat.setupTests.enabled": false,
+    "github.copilot.chat.summarizeAgentConversationHistory.enabled": false,
+    "github.copilot.chat.updated53CodexPrompt.enabled": false,
+    "chat.extensionUnification.enabled": false
+}
