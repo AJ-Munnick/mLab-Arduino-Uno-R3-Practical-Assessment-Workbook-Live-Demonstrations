@@ -1,0 +1,2 @@
+# mLab-Arduino-Uno-R3-Practical-Assessment-Workbook-Live-Demonstrations
+Before you start Equipment and preparation Every project needs an Uno R3, a data-capable USB cable, a computer with Arduino IDE, a breadboard and jumper wires. Reuse the components between projects. Projects 4–6 also require a suitable regulated 5V servo supply; the teacher must check its voltage and current rating against the actual servo.
