@@ -1,67 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore the Arduino Uno R3 project demonstrations.">
-  <title>Arduino Project Demonstrations</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
-</head>
+<html>
+    <head>
+        <title>IoT Project Demonstrations</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">Arduino Project Showcase</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
-        Menu
-      </button>
-      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="member1.html">Arsenio</a>
-        <a href="member2.html">Jadelyn</a>
-        <a href="member3.html">Emilio</a>
-        <a href="member4.html">Braydon</a>
-      </nav>
-    </div>
-  </header>
+  <h1>Group IoT Project Demonstrations</h1>
 
-  <main class="page-shell">
-    <section class="page-intro" aria-labelledby="page-title">
-      <p class="eyebrow">Arduino Uno R3 · Live demonstrations</p>
-      <h1 id="page-title">Explore the project showcase</h1>
-      <p>Browse each team member's demonstrations of the six practical electronics projects.</p>
-    </section>
+  <div class="admin-panel">
+    <h2>Admin: Arsenio Munnick</h2>
+    <form id="admin-form">
+      <input id="new-member-name" type="text" placeholder="Add another member" maxlength="80">
+      <button type="submit">Add member</button>
+    </form>
+  </div>
 
-    <section class="member-grid" aria-label="Team member demonstrations">
-      <article class="member-card">
-        <span class="member-avatar" aria-hidden="true">AM</span>
-        <h2>Arsenio Munnick</h2>
-        <p>View six Arduino project demonstrations.</p>
-        <a class="button-link" href="member1.html">View demonstrations</a>
-      </article>
-      <article class="member-card">
-        <span class="member-avatar" aria-hidden="true">JL</span>
-        <h2>Jadelyn Loots</h2>
-        <p>View six Arduino project demonstrations.</p>
-        <a class="button-link" href="member2.html">View demonstrations</a>
-      </article>
-      <article class="member-card">
-        <span class="member-avatar" aria-hidden="true">EJ</span>
-        <h2>Emelio Johnson</h2>
-        <p>View six Arduino project demonstrations.</p>
-        <a class="button-link" href="member3.html">View demonstrations</a>
-      </article>
-      <article class="member-card">
-        <span class="member-avatar" aria-hidden="true">BA</span>
-        <h2>Braydon Alexander</h2>
-        <p>View six Arduino project demonstrations.</p>
-        <a class="button-link" href="member4.html">View demonstrations</a>
-      </article>
-    </section>
-  </main>
+  <div class="card-container" id="member-list"></div>
 
-  <footer class="site-footer">
-    <p>Arduino Uno R3 practical project demonstrations</p>
-  </footer>
+  <script src="app.js"></script>
 </body>
 </html>

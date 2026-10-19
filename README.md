@@ -1,22 +1,21 @@
-# mLab Arduino Uno R3 Project Demonstrations
+# mLab Arduino Uno R3 Project Showcase
 
-A lightweight, responsive website for browsing live demonstrations of six beginner Arduino Uno R3 projects. The home page links to a demonstration page for each participating team member; each page provides project summaries and quick links to jump between projects.
+A responsive browser-based app for managing members and their video demonstrations for six beginner Arduino Uno R3 projects. Add a member to create a card with six project slots, then upload, play, replace, or remove a video in each slot.
 
-This repository contains the static showcase website. It does not currently include circuit diagrams, Arduino sketches, assessment worksheets, or a complete set of demonstration videos.
+## Important: local prototype
+
+This app saves member records and uploaded video files in the browser's IndexedDB database on the current device. It has no server, user accounts, sign-in, or admin access control:
+
+- Content is **not shared** with other people or browsers, even when the site is published on GitHub Pages.
+- Anyone using the same browser profile can add or delete members and videos.
+- Browser storage is subject to device/browser quotas and may be cleared by the user or browser. Keep the original video files elsewhere.
+- The app limits each video to 50 MB, but the browser's total storage limit may be lower than the combined size of all uploads.
+
+This version is intended as a local prototype. Use a hosted backend with authentication, database storage, and access policies if the content must be shared or managed securely.
 
 ## Contents
 
-| Page | Demonstrator |
-| --- | --- |
-| [Home](index.html) | Browse all demonstrators |
-| [member1.html](member1.html) | Arsenio Munnick |
-| [member2.html](member2.html) | Jadelyn Loots |
-| [member3.html](member3.html) | Emelio Johnson |
-| [member4.html](member4.html) | Braydon Alexander |
-
-`member5.html` is currently an empty file and is not linked from the site.
-
-Each member page covers the same six projects:
+The app uses these six fixed project slots for every member:
 
 1. Potentiometer LED Dimmer
 2. Automatic Night Light
@@ -25,7 +24,7 @@ Each member page covers the same six projects:
 5. Light Controlled Servo
 6. Smart Model Security Gate
 
-## Run the website
+## Run the app
 
 No package installation, build step, or framework is required. Serve the repository directory using any static web server.
 
@@ -35,51 +34,40 @@ For example, with Python installed, open a terminal in the repository directory 
 py -m http.server 8000
 ```
 
-Then open [http://localhost:8000](http://localhost:8000) in a browser. Stop the server with `Ctrl+C`.
+Then open [http://localhost:8000](http://localhost:8000) in a modern browser. Stop the server with `Ctrl+C`.
 
-You can also open `index.html` directly, but using a local web server is recommended for consistent browser behavior and embedded media.
+IndexedDB works best when the app is served over HTTP or HTTPS. Do not use private/incognito browsing for content you want to keep; browser storage may be temporary there.
 
 ## Features
 
-- Responsive home page with a card for each demonstrator.
-- Shared navigation across the home page and member pages.
-- Mobile navigation menu with keyboard support, Escape-to-close behavior, and a current-page indicator.
-- Six project jump links on every member page.
-- Responsive video frames and clear notices where a demonstration is not yet available.
-- Semantic HTML landmarks, visible keyboard focus indicators, and reduced-motion support.
-
-## Demonstration availability
-
-Video content is incomplete and should be checked before using the site as evidence of project completion.
-
-- Arsenio's page embeds a YouTube video for Projects 1, 4, 5, and 6; Projects 2 and 3 are marked as coming soon. The same YouTube video is currently used for all four embeds.
-- Jadelyn, Emelio, and Braydon's pages currently show “Demonstration video coming soon” for all six projects.
-
-To add a video, replace the placeholder inside the appropriate project card with a responsive iframe. Use that video’s actual embed URL and a descriptive `title`; do not leave sample IDs or empty `src` attributes in the page.
+- Add members with unique names and automatically generate their six project slots.
+- Upload and play local video files, replace existing videos, or remove a video or member and all their videos.
+- Validate video file type and enforce a 50 MB limit for each upload.
+- Keep member and video records between visits in the same browser profile using IndexedDB.
+- Responsive layout, mobile navigation, keyboard support, and visible storage/error messages.
 
 ## Arduino equipment context
 
 The practical projects use an Arduino Uno R3, a data-capable USB cable, a computer with the Arduino IDE, a breadboard, and jumper wires. Reuse components between projects. Projects 4–6 require a suitable regulated 5 V servo supply; have a teacher verify that its voltage and current ratings are appropriate for the servo being used.
 
-The website presents project names and demonstrations only. Refer to the relevant practical-assessment instructions for circuit wiring, code, testing, and assessment requirements.
+The app provides project titles and video slots only. Refer to the relevant practical-assessment instructions for circuit wiring, code, testing, and assessment requirements.
 
 ## Project files
 
 ```text
 .
-├── index.html    # Showcase home page
-├── member1.html  # Arsenio Munnick's demonstrations
-├── member2.html  # Jadelyn Loots's demonstrations
-├── member3.html  # Emelio Johnson's demonstrations
-├── member4.html  # Braydon Alexander's demonstrations
-├── member5.html  # Empty, unused placeholder
-├── style.css     # Shared responsive site styles
-└── app.js        # Shared navigation interactions
+├── index.html    # Member and video management app
+├── app.js        # Navigation, IndexedDB, member cards, and video uploads
+├── style.css     # Shared responsive styles
+├── member1.html  # Original static demonstration page
+├── member2.html  # Original static demonstration page
+├── member3.html  # Original static demonstration page
+├── member4.html  # Original static demonstration page
+└── member5.html  # Empty placeholder
 ```
 
-## Editing and publishing
+The `member1.html`–`member4.html` files are retained as the original static demonstration pages; the app's new member and video data is managed from `index.html`.
 
-- Keep shared navigation and visual conventions consistent across the home page and member pages.
-- Give each project card a unique `project-N` ID and ensure its jump link points to that ID.
-- Test navigation, keyboard use, mobile layout, and external video embeds in a browser after editing.
-- Publish the files to any static web host. No server-side runtime is required.
+## Publishing and data scope
+
+The static app can be published to GitHub Pages or another static host without a server runtime. Publishing the code does not publish or sync the videos saved in your browser. A separate hosted backend is required for shared access, secure admin accounts, and centralized video storage.
